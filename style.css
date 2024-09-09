@@ -56,17 +56,30 @@ h1, p, a, div {
     border: 3px solid #333; /* Border around each thumbnail */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .thumbnail img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    display: block;
 }
 
 .thumbnail:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Thumbnail title styling for the main page */
+.thumbnail-title {
+    font-size: 18px; /* Adjust the font size */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Dark color for the text */
+    text-align: center; /* Center the title under the thumbnail */
+    padding: 10px 0; /* Padding to reduce the space between the title and the thumbnail */
+    margin: 0;
 }
 
 /* Ache Esports specific styles */
@@ -162,14 +175,36 @@ h1.project4-layout, p.project4-layout, div.project4-layout, a.project4-layout {
 /* 3D Animation specific styles */
 body.project2-layout {
     background-color: #1c1c1c; /* Dark background */
-    color: white; /* White text for better contrast */
+    color: white !important; /* White text for better contrast */
     overflow-y: scroll; /* Enable vertical scrolling */
 }
 
 h1.project2-layout, p.project2-layout, div.project2-layout, a.project2-layout {
-    color: white; /* Force white text */
+    color: white !important; /* Force white text for the 3D Animation page */
+    font-weight: bold; /* Make sure it's bold like the Ache Esports */
 }
 
+/* Fixed icons in the top left for the 3D Animation page */
+.project2-layout .fixed-icons {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px; /* Space between the icons */
+    z-index: 100;
+}
+
+.project2-layout .fixed-icons .icon {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.project2-layout .fixed-icons .icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Single column scrolling layout for 3D Animation */
 body.project2-layout .gallery {
     display: flex;
     flex-direction: column;
@@ -199,3 +234,4 @@ body.project2-layout video:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
 }
+
