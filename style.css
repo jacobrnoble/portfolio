@@ -1,0 +1,201 @@
+/* General styles for all pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1, p, a, div {
+    color: #333; /* Default dark color for all other pages */
+}
+
+.back-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    top: 0;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+/* Channel button */
+.channel-button {
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #cc0000;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.channel-button:hover {
+    background-color: #ff1a1a;
+}
+
+/* Thumbnail styling */
+.thumbnail {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid #333; /* Border around each thumbnail */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ache Esports specific styles */
+body.project3-layout {
+    background-image: url('assets/project3/ache_background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white !important;
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+/* Fixed logo at the top left corner */
+.project3-layout .fixed-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 100px; /* Adjust the size of the logo */
+    height: auto;
+    z-index: 100; /* Ensure it stays on top of other elements */
+}
+
+/* General text color for project3 */
+h1.project3-layout, p.project3-layout, div.project3-layout, a.project3-layout {
+    color: white !important; /* White text for Ache Esports */
+}
+
+/* Single column scrolling layout for Ache Esports */
+body.project3-layout .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body.project3-layout .thumbnail {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.project3-layout .thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+body.project3-layout .thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+body.project3-layout .video-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+body.project3-layout video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Project 4 specific styles (Engineering Project) */
+body.project4-layout {
+    background-color: #f4f4f4; /* Default background */
+}
+
+h1.project4-layout, p.project4-layout, div.project4-layout, a.project4-layout {
+    color: #333; /* Keep the text dark for Project 4 */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3D Animation specific styles */
+body.project2-layout {
+    background-color: #1c1c1c; /* Dark background */
+    color: white; /* White text for better contrast */
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+h1.project2-layout, p.project2-layout, div.project2-layout, a.project2-layout {
+    color: white; /* Force white text */
+}
+
+body.project2-layout .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 600px; /* Keep it within the Instagram-like aspect ratio */
+    margin: 0 auto;
+}
+
+body.project2-layout .video-container {
+    width: 100%;
+    max-width: 400px; /* Set max width for the video */
+    padding: 10px;
+    aspect-ratio: 9 / 16; /* Maintain 9:16 aspect ratio */
+}
+
+body.project2-layout video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the full container while maintaining the aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+body.project2-layout video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
