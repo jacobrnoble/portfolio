@@ -235,3 +235,13 @@ body.project2-layout video:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
 }
 
+.click-animation {
+    position: absolute;
+    z-index: 100;
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    pointer-events: none; /* Ensures clicks pass through the animation */
+    opacity: 1; /* Ensure full opacity */
+    background: transparent; /* Ensure transparency */
+}
+
